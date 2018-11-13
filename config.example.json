@@ -1,0 +1,9 @@
+{
+  "token": "fd98sf78das:fdasfd8sf8fdsajk",
+  "rcon": {
+    "address": "localhost",
+    "port": 38000,
+    "secret": "changeme"
+  },
+  "userIds": ["12345678"]
+}
