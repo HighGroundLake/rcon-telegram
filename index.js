@@ -1,4 +1,4 @@
-const config = require('config.json')
+const config = require('./config.json')
 const TelegramBot = require('node-telegram-bot-api');
 
 const userId = 231038319
@@ -50,16 +50,15 @@ bot.onText(/\/rcon (.+)/, function (msg, match){
       conn.connect();
   }
 });
-bot.onText(/\/getmyid/, function(msg, match) {
+bot.onText(/\/rcongetmyid/, function(msg, match) {
   bot.sendMessage(msg.chat.id, '你的ID是: ' + msg.from.id + '\n如果需要权限的话就把这个ID告诉管理员')
 })
 
 // Listen for any kind of message. There are different kinds of
 // messages.
-bot.on('message', (msg) => {
-const chatId = msg.chat.id;
+//bot.on('message', (msg) => {
+//const chatId = msg.chat.id;
 
- //send a message to the chat acknowledging receipt of their message
-  bot.sendMessage(chatId, 'Received your message');
-  bot.sendMessage(chatId, JSON.stringify(msg, null, 2));
-});
+ ////send a message to the chat acknowledging receipt of their message
+  //bot.sendMessage(chatId, JSON.stringify(msg, null, 2));
+//});
